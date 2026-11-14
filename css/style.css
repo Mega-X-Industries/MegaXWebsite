@@ -984,3 +984,83 @@ img {
         transform: scale(0.65);
     }
 }
+
+/* =========================================
+   15. Mobile Navigation and Scroll Reveal
+========================================= */
+
+.mobile-menu-button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--white);
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.section-hidden {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    .navbar-content {
+        position: relative;
+    }
+
+    .mobile-menu-button {
+        display: inline-flex;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: min(240px, 90vw);
+        padding: 8px 0;
+        border: 1px solid var(--border-light);
+        background: var(--navy);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    }
+
+    .navigation.navigation-open {
+        display: flex;
+    }
+
+    .navigation a {
+        display: block;
+        padding: 12px 18px;
+        font-size: 0.9rem;
+    }
+
+    .navigation a::after {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section-hidden,
+    .section-visible {
+        transform: none;
+        transition: none;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
