@@ -3,147 +3,86 @@
     Main JavaScript File
 */
 
-
-/* =========================================
-   Mobile Navigation
-========================================= */
-
-const navigation = document.querySelector(".navigation");
 const navbar = document.querySelector(".navbar");
+const navigation = document.querySelector(".navigation");
+const mobileMenuButton = document.querySelector(".mobile-menu-button");
 
+if (navbar && navigation && mobileMenuButton) {
+    // Enable the collapsible navigation only after its controls are ready.
+    navbar.classList.add("mobile-menu-ready");
 
-/*
-    Create mobile menu button
-*/
-
-const mobileMenuButton = document.createElement("button");
-
-mobileMenuButton.className = "mobile-menu-button";
-mobileMenuButton.setAttribute(
-    "aria-label",
-    "Open navigation menu"
-);
-
-mobileMenuButton.innerHTML = "☰";
-
-navbar.querySelector(".navbar-content").appendChild(
-    mobileMenuButton
-);
-
-
-/*
-    Open and close mobile navigation
-*/
-
-mobileMenuButton.addEventListener(
-    "click",
-    function () {
-
-        navigation.classList.toggle(
-            "navigation-open"
-        );
-
+    function closeMobileNavigation() {
+        navigation.classList.remove("navigation-open");
+        mobileMenuButton.setAttribute("aria-expanded", "false");
+        mobileMenuButton.setAttribute("aria-label", "Open navigation menu");
+        mobileMenuButton.querySelector("span").textContent = "☰";
     }
-);
 
-
-/*
-    Close navigation when a link is selected
-*/
-
-const navigationLinks =
-    document.querySelectorAll(
-        ".navigation a"
-    );
-
-navigationLinks.forEach(
-    function (link) {
-
-        link.addEventListener(
-            "click",
-            function () {
-
-                navigation.classList.remove(
-                    "navigation-open"
-                );
-
-            }
+    mobileMenuButton.addEventListener("click", function () {
+        const isOpen = navigation.classList.toggle("navigation-open");
+        mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+        mobileMenuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
         );
+        mobileMenuButton.querySelector("span").textContent = isOpen ? "×" : "☰";
+    });
 
-    }
-);
+    navigation.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", closeMobileNavigation);
+    });
 
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closeMobileNavigation();
+            mobileMenuButton.focus();
+        }
+    });
 
-/* =========================================
-   Scroll Reveal Animation
-========================================= */
+    document.addEventListener("click", function (event) {
+        if (!navbar.contains(event.target)) {
+            closeMobileNavigation();
+        }
+    });
 
-const sections =
-    document.querySelectorAll(
-        ".section"
-    );
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 600) {
+            closeMobileNavigation();
+        }
+    });
+}
 
+/* Scroll reveal: content remains visible if the browser lacks support. */
+const sections = document.querySelectorAll(".section");
+const prefersReducedMotion = window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-const sectionObserver =
-    new IntersectionObserver(
-        function (entries) {
-
-            entries.forEach(
-                function (entry) {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add(
-                            "section-visible"
-                        );
-
-                        sectionObserver.unobserve(
-                            entry.target
-                        );
-
-                    }
-
+if ("IntersectionObserver" in window && !prefersReducedMotion) {
+    const sectionObserver = new IntersectionObserver(
+        function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("section-visible");
+                    observer.unobserve(entry.target);
                 }
-            );
-
+            });
         },
         {
-            threshold: 0.15
+            threshold: 0.05,
+            rootMargin: "0px 0px -40px 0px"
         }
     );
 
+    sections.forEach(function (section) {
+        section.classList.add("section-hidden");
+        sectionObserver.observe(section);
+    });
+}
 
-sections.forEach(
-    function (section) {
-
-        section.classList.add(
-            "section-hidden"
-        );
-
-        sectionObserver.observe(
-            section
-        );
-
-    }
-);
-
-
-/* =========================================
-   Current Year
-========================================= */
-
-const copyright =
-    document.querySelector(
-        ".copyright"
-    );
-
+/* Keep the footer year current. */
+const copyright = document.querySelector(".copyright");
 
 if (copyright) {
-
-    const currentYear =
-        new Date().getFullYear();
-
     copyright.textContent =
-        `© ${currentYear} Mega X Industries. All rights reserved.`;
-
+        `© ${new Date().getFullYear()} Mega X Industries. All rights reserved.`;
 }
