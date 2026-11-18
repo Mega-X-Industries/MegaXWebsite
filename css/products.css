@@ -1,0 +1,37 @@
+/* Product showcases and product detail pages */
+.section-intro { max-width:680px; margin-top:22px; color:var(--gray); font-size:1.05rem; line-height:1.8; }
+.products { background:var(--white); }
+.product-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.product-card { min-height:350px; display:flex; flex-direction:column; justify-content:space-between; gap:35px; padding:38px; border:1px solid #e3eaf0; background:linear-gradient(145deg,#fff,#f5f8fa); transition:var(--transition); }
+.product-card:hover { transform:translateY(-7px); border-color:var(--cyan); box-shadow:0 20px 50px rgba(7,27,44,.08); }
+.product-card-top { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.product-category,.detail-eyebrow { color:var(--gray); font-size:.68rem; font-weight:700; letter-spacing:2px; }
+.product-symbol { width:54px; height:54px; display:grid; place-items:center; border:1px solid rgba(32,199,232,.5); border-radius:16px; color:var(--deep-blue); background:rgba(32,199,232,.1); font-size:1.6rem; font-weight:800; }
+.product-card h3 { margin-bottom:12px; color:var(--navy); font-size:2rem; }
+.product-card p { max-width:520px; color:var(--gray); line-height:1.8; }
+.product-link { display:inline-flex; align-items:center; gap:16px; width:fit-content; color:var(--deep-blue); font-weight:700; }
+.product-link span { color:#079fbe; transition:var(--transition); }
+.product-link:hover span { transform:translateX(5px); }
+.solutions-cta { display:flex; align-items:center; justify-content:space-between; gap:24px; margin-top:48px; padding:30px; background:var(--white); border:1px solid #e5eaee; }
+.solutions-cta p { color:var(--dark-text); font-weight:600; }
+.product-hero { padding:170px 0 100px; color:var(--white); background:linear-gradient(135deg,var(--navy),var(--deep-blue) 65%,var(--blue)); }
+.product-hero-content { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(220px,.8fr); align-items:center; gap:60px; }
+.product-hero h1 { margin:18px 0 24px; font-size:clamp(3rem,7vw,5.4rem); line-height:1; letter-spacing:-3px; }
+.product-hero h1 span { color:var(--cyan); }
+.product-hero-description { max-width:650px; color:rgba(255,255,255,.76); font-size:1.1rem; line-height:1.85; }
+.product-hero-actions { display:flex; flex-wrap:wrap; align-items:center; gap:22px; margin-top:34px; }
+.secondary-link { color:var(--white); font-weight:600; border-bottom:1px solid var(--cyan); padding-bottom:5px; }
+.product-orbit { width:min(260px,70vw); aspect-ratio:1; display:grid; place-items:center; justify-self:center; border:1px solid rgba(32,199,232,.5); border-radius:50%; box-shadow:0 0 80px rgba(32,199,232,.12),inset 0 0 50px rgba(32,199,232,.08); }
+.product-orbit span { color:var(--cyan); font-size:5rem; font-weight:800; }
+.detail-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+.detail-card { padding:30px; border:1px solid #e5eaee; background:var(--white); }
+.detail-card h3 { margin:14px 0 10px; font-size:1.2rem; }
+.detail-card p { color:var(--gray); line-height:1.75; }
+.detail-number { color:#079fbe; font-size:.75rem; font-weight:800; letter-spacing:2px; }
+.product-note { margin-top:34px; padding:22px 26px; border-left:3px solid var(--cyan); background:var(--light-gray); color:var(--gray); line-height:1.75; }
+.product-contact { padding:65px 0; color:var(--white); background:var(--navy); }
+.product-contact-inner { display:flex; align-items:center; justify-content:space-between; gap:28px; }
+.product-contact h2 { margin-bottom:8px; font-size:clamp(1.8rem,4vw,2.6rem); }
+.product-contact p { color:rgba(255,255,255,.7); }
+@media(max-width:900px) { .detail-grid{grid-template-columns:1fr 1fr}.product-hero-content{grid-template-columns:1fr}.product-orbit{display:none} }
+@media(max-width:600px) { .product-grid,.detail-grid{grid-template-columns:1fr}.product-card{min-height:320px;padding:28px}.solutions-cta,.product-contact-inner{align-items:flex-start;flex-direction:column}.product-hero{padding:135px 0 75px}.product-hero h1{letter-spacing:-2px} }
