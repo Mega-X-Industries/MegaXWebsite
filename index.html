@@ -4,28 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Mega X Industries builds digital products and software solutions for businesses, organisations and people." />
-    <title>Mega X Industries | Digital Products & Software Solutions</title>
+    <meta name="theme-color" content="#071B2C" />
+    <title>Mega X Industries | Digital Products &amp; Software Solutions</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/products.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     <header class="navbar">
       <div class="container navbar-content">
         <a href="index.html" class="logo" aria-label="Mega X Industries home">
           <span class="logo-mega">MEGA</span><span class="logo-x">X</span><span class="logo-industries">INDUSTRIES</span>
         </a>
-        <nav class="navigation" aria-label="Main navigation">
+        <nav class="navigation" id="primary-navigation" aria-label="Main navigation">
           <a href="#about">About</a>
           <a href="#products">Products</a>
           <a href="#solutions">Solutions</a>
           <a href="#contact">Contact</a>
         </nav>
+        <button class="mobile-menu-button" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero">
-        <div class="hero-pattern"></div>
+        <div class="hero-pattern" aria-hidden="true"></div>
         <div class="container hero-content">
           <div class="hero-text">
             <p class="eyebrow">DIGITAL PRODUCTS • SOFTWARE SOLUTIONS</p>
@@ -35,7 +41,7 @@
               solutions that help businesses, organisations and people work,
               connect and grow.
             </p>
-            <a href="#products" class="primary-button">Discover Our Products <span>→</span></a>
+            <a href="#products" class="primary-button">Discover Our Products <span aria-hidden="true">→</span></a>
           </div>
           <div class="hero-visual" aria-hidden="true">
             <div class="network">
@@ -75,26 +81,26 @@
           <div class="product-grid">
             <article class="product-card product-card-grubnbite">
               <div class="product-card-top">
-                <span class="product-category">FOOD & HOSPITALITY TECHNOLOGY</span>
+                <span class="product-category">FOOD &amp; HOSPITALITY TECHNOLOGY</span>
                 <span class="product-symbol" aria-hidden="true">G</span>
               </div>
               <div>
                 <h3>GrubnBite</h3>
                 <p>A food ordering and restaurant platform connecting customers with restaurants through a convenient digital experience.</p>
               </div>
-              <a class="product-link" href="https://grubnbite.com/" target="_blank" rel="noopener noreferrer">Open GrubnBite <span>→</span></a>
+              <a class="product-link" href="https://grubnbite.com/" target="_blank" rel="noopener noreferrer">Explore GrubnBite <span aria-hidden="true">→</span></a>
             </article>
 
             <article class="product-card product-card-stryma">
               <div class="product-card-top">
-                <span class="product-category">AI & PRODUCTIVITY</span>
+                <span class="product-category">AI &amp; PRODUCTIVITY</span>
                 <span class="product-symbol" aria-hidden="true">S</span>
               </div>
               <div>
                 <h3>Stryma</h3>
                 <p>An AI-powered meeting assistance platform designed to help teams capture, organise and make better use of meeting information.</p>
               </div>
-              <a class="product-link" href="https://stryma-website.onrender.com/" target="_blank" rel="noopener noreferrer">Open Stryma <span>→</span></a>
+              <a class="product-link" href="https://stryma-website.onrender.com/" target="_blank" rel="noopener noreferrer">Explore Stryma <span aria-hidden="true">→</span></a>
             </article>
           </div>
         </div>
@@ -115,7 +121,7 @@
             </article>
             <article class="service-card">
               <div class="service-number">02</div>
-              <h3>Web & Mobile Applications</h3>
+              <h3>Web &amp; Mobile Applications</h3>
               <p>Responsive websites and mobile applications that make services and information easier to access.</p>
             </article>
             <article class="service-card">
@@ -130,7 +136,7 @@
             </article>
             <article class="service-card">
               <div class="service-number">05</div>
-              <h3>AI & Automation</h3>
+              <h3>AI &amp; Automation</h3>
               <p>Exploring practical uses of artificial intelligence and automation to support everyday work.</p>
             </article>
             <article class="service-card">
@@ -141,7 +147,7 @@
           </div>
           <div class="solutions-cta">
             <p>Have a project or an idea you'd like to explore?</p>
-            <a href="#contact" class="primary-button">Talk to Mega X Industries <span>→</span></a>
+            <a href="#contact" class="primary-button">Talk to Mega X Industries <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </section>
