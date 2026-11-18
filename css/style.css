@@ -4,15 +4,18 @@
 ========================================= */
 
 :root {
-    --navy: #071B2C;
-    --deep-blue: #0B2D47;
-    --blue: #103A5C;
-    --cyan: #20C7E8;
-    --light-cyan: #8BE8F5;
+    --navy: #171F2B;
+    --deep-blue: #253746;
+    --blue: #304657;
+    --soft-cyan: #75B9CE;
+    --cyan: var(--soft-cyan);
+    --silver-mist: #DCE4E8;
+    --cloud-white: #F1F4F4;
+    --light-cyan: var(--silver-mist);
     --white: #FFFFFF;
-    --light-gray: #F4F7F9;
-    --gray: #66727D;
-    --dark-text: #17212B;
+    --light-gray: #DCE4E8;
+    --gray: #53616A;
+    --dark-text: #253746;
     --border-light: rgba(255, 255, 255, 0.12);
     --container-width: 1200px;
     --transition: 0.3s ease;
@@ -31,7 +34,7 @@ html {
 
 body {
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-    background-color: var(--white);
+    background-color: #F1F4F4;
     color: var(--dark-text);
     line-height: 1.6;
 }
@@ -183,7 +186,7 @@ img {
     top: -250px;
     right: -150px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(32, 199, 232, 0.12), transparent 70%);
+    background: radial-gradient(circle, rgba(117, 185, 206, 0.12), transparent 70%);
     pointer-events: none;
 }
 
@@ -192,8 +195,8 @@ img {
     inset: 0;
     opacity: 0.12;
     background-image:
-        linear-gradient(rgba(32, 199, 232, 0.3) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(32, 199, 232, 0.3) 1px, transparent 1px);
+        linear-gradient(rgba(117, 185, 206, 0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(117, 185, 206, 0.3) 1px, transparent 1px);
     background-size: 70px 70px;
     mask-image: linear-gradient(to right, transparent, black 55%, transparent);
     pointer-events: none;
@@ -287,14 +290,14 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(32, 199, 232, 0.5);
+    border: 1px solid rgba(117, 185, 206, 0.5);
     border-radius: 50%;
     color: var(--cyan);
     font-size: 0.8rem;
     font-weight: 700;
     background: rgba(7, 27, 44, 0.75);
     backdrop-filter: blur(8px);
-    box-shadow: 0 0 30px rgba(32, 199, 232, 0.08);
+    box-shadow: 0 0 30px rgba(117, 185, 206, 0.08);
 }
 
 .node-center {
@@ -305,7 +308,7 @@ img {
     border: 2px solid var(--cyan);
     color: var(--white);
     font-size: 1.1rem;
-    box-shadow: 0 0 40px rgba(32, 199, 232, 0.2);
+    box-shadow: 0 0 40px rgba(117, 185, 206, 0.2);
 }
 
 .node-one {
@@ -369,7 +372,11 @@ img {
 }
 
 .section-heading h2 span {
-    color: var(--cyan);
+    color: var(--deep-blue);
+    text-decoration: underline;
+    text-decoration-color: var(--soft-cyan);
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
 }
 
 /* About */
@@ -418,7 +425,7 @@ img {
 }
 
 .service-number {
-    color: #078eaa;
+    color: #365568;
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 2px;
@@ -471,13 +478,13 @@ img {
 }
 
 .contact-details a:hover {
-    color: #087f98;
+    color: #365568;
 }
 
 /* Footer */
 .footer {
     padding: 40px 0;
-    background-color: #04121F;
+    background-color: #111923;
     color: rgba(255, 255, 255, 0.72);
 }
 
