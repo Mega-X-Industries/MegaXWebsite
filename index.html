@@ -2,251 +2,179 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <meta
-      name="description"
-      content="Mega X Industries develops connected digital solutions and platforms designed for a modern digital world."
-    />
-
-    <title>Mega X Industries | Digital Solutions</title>
-
+    <meta name="description" content="Mega X Industries builds digital products and software solutions for businesses, organisations and people." />
+    <meta name="theme-color" content="#171F2B" />
+    <title>Mega X Industries | Digital Products &amp; Software Solutions</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/products.css" />
   </head>
-
   <body>
-    <!-- =========================
-         Navigation
-    ========================== -->
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     <header class="navbar">
       <div class="container navbar-content">
-        <a href="#" class="logo">
-          <span class="logo-mega">MEGA</span>
-          <span class="logo-x">X</span>
-          <span class="logo-industries">INDUSTRIES</span>
+        <a href="index.html" class="logo" aria-label="Mega X Industries home">
+          <span class="logo-mega">MEGA</span><span class="logo-x">X</span><span class="logo-industries">INDUSTRIES</span>
         </a>
-
-        <nav class="navigation">
+        <nav class="navigation" id="primary-navigation" aria-label="Main navigation">
           <a href="#about">About</a>
+          <a href="#products">Products</a>
           <a href="#solutions">Solutions</a>
           <a href="#contact">Contact</a>
         </nav>
+        <button class="mobile-menu-button" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu">
+          <span aria-hidden="true">☰</span>
+        </button>
       </div>
     </header>
 
-    <!-- =========================
-         Hero Section
-    ========================== -->
-    <main>
+    <main id="main-content">
       <section class="hero">
-        <div class="hero-pattern"></div>
-
+        <div class="hero-pattern" aria-hidden="true"></div>
         <div class="container hero-content">
           <div class="hero-text">
-            <p class="eyebrow">DIGITAL SOLUTIONS • CONNECTED FUTURES</p>
-
-            <h1>
-              Building the
-              <span>digital future.</span>
-            </h1>
-
+            <p class="eyebrow">LOCAL INNOVATION • CONNECTED FUTURES</p>
+            <h1>Building <span>South Africa’s digital future.</span></h1>
             <p class="hero-description">
-              Mega X Industries develops innovative digital solutions designed
-              to bring businesses, services and people together through
-              connected platforms.
+              We build locally relevant digital products and software solutions that
+              connect businesses, organisations and communities with the services
+              and opportunities they need.
             </p>
-
-            <a href="#solutions" class="primary-button">
-              Explore Our Solutions
-              <span>→</span>
-            </a>
+            <a href="#products" class="primary-button">Discover Our Products <span aria-hidden="true">→</span></a>
           </div>
-
-          <div class="hero-visual">
+          <div class="hero-visual" aria-hidden="true">
             <div class="network">
               <div class="network-line line-one"></div>
               <div class="network-line line-two"></div>
               <div class="network-line line-three"></div>
-
-              <div class="network-node node-center">
-                <span>MX</span>
-              </div>
-
-              <div class="network-node node-one">
-                <span>01</span>
-              </div>
-
-              <div class="network-node node-two">
-                <span>02</span>
-              </div>
-
-              <div class="network-node node-three">
-                <span>03</span>
-              </div>
+              <div class="network-node node-center"><span>MX</span></div>
+              <div class="network-node node-one"><span>01</span></div>
+              <div class="network-node node-two"><span>02</span></div>
+              <div class="network-node node-three"><span>03</span></div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- =========================
-             About Section
-        ========================== -->
       <section class="about section" id="about">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">WHO WE ARE</p>
-
-            <h2>
-              Technology with
-              <span>purpose.</span>
-            </h2>
+            <h2>Technology with <span>local impact.</span></h2>
           </div>
-
           <div class="about-content">
-            <p>
-              Mega X Industries is focused on developing digital platforms and
-              technology solutions that simplify how people and businesses
-              interact with essential services.
-            </p>
-
-            <p>
-              Our approach is centred around creating connected solutions that
-              can work together as part of a broader digital ecosystem.
-            </p>
+            <p>Mega X Industries is a technology company focused on creating digital products and software solutions that address real needs.</p>
+            <p>We bring ideas into practical use through thoughtful product development, connected platforms and technology that supports better ways of working.</p>
           </div>
         </div>
       </section>
 
-      <!-- =========================
-             What We Do
-        ========================== -->
-      <section class="services section">
+      <section class="products section" id="products">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">WHAT WE DO</p>
-
-            <h2>
-              Building solutions
-              <span>that connect.</span>
-            </h2>
+            <p class="eyebrow">MADE BY MEGA X INDUSTRIES</p>
+            <h2>Our <span>products.</span></h2>
+            <p class="section-intro">Explore the digital platforms we are building to solve problems and create useful experiences.</p>
           </div>
 
+          <div class="product-grid">
+            <article class="product-card product-card-grubnbite">
+              <div class="product-card-top">
+                <span class="product-category">FOOD &amp; HOSPITALITY TECHNOLOGY</span>
+                <span class="product-symbol" aria-hidden="true">G</span>
+              </div>
+              <div>
+                <h3>GrubnBite</h3>
+                <p>A food-ordering platform where customers can discover restaurants, browse menus, place orders and pay online. Restaurant partners can manage their restaurant profiles, menus and incoming orders.</p>
+              </div>
+              <a class="product-link" href="https://grubnbite.com/" target="_blank" rel="noopener noreferrer">Explore GrubnBite <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="product-card product-card-stryma">
+              <div class="product-card-top">
+                <span class="product-category">VIDEO SHARING PLATFORM</span>
+                <span class="product-symbol" aria-hidden="true">S</span>
+              </div>
+              <div>
+                <h3>Stryma</h3>
+                <p>A video-sharing platform where people can discover and watch videos, while creators can upload content, build channels and engage with their audiences through likes, comments and other interactions.</p>
+              </div>
+              <a class="product-link" href="https://stryma-website.onrender.com/" target="_blank" rel="noopener noreferrer">Explore Stryma <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="services section" id="solutions">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">WHAT WE OFFER</p>
+            <h2>Our <span>solutions.</span></h2>
+            <p class="section-intro">We work with organisations to plan, develop and improve technology that supports their goals.</p>
+          </div>
           <div class="service-grid">
             <article class="service-card">
               <div class="service-number">01</div>
-
-              <h3>Digital Solutions</h3>
-
-              <p>
-                We create digital solutions that address real-world business and
-                service needs.
-              </p>
+              <h3>Custom Software Development</h3>
+              <p>Design and development of software shaped around specific operational needs and business processes.</p>
             </article>
-
             <article class="service-card">
               <div class="service-number">02</div>
-
-              <h3>Platform Development</h3>
-
-              <p>
-                We develop connected platforms that bring different services and
-                applications together.
-              </p>
+              <h3>Web &amp; Mobile Applications</h3>
+              <p>Responsive websites and mobile applications that make services and information easier to access.</p>
             </article>
-
             <article class="service-card">
               <div class="service-number">03</div>
-
-              <h3>Software Innovation</h3>
-
-              <p>
-                We use modern technology to build practical software solutions
-                for a changing digital world.
-              </p>
+              <h3>Systems Integration</h3>
+              <p>Connecting applications, APIs and existing systems to support smoother information flow and workflows.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-number">04</div>
+              <h3>Digital Transformation</h3>
+              <p>Helping organisations identify opportunities to improve services and processes through technology.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-number">05</div>
+              <h3>AI &amp; Automation</h3>
+              <p>Exploring practical uses of artificial intelligence and automation to support everyday work.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-number">06</div>
+              <h3>Technology Consulting</h3>
+              <p>Technical guidance to help shape project requirements, technology choices and implementation plans.</p>
             </article>
           </div>
-        </div>
-      </section>
-
-      <!-- =========================
-             Solutions
-        ========================== -->
-      <section class="solutions section" id="solutions">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">OUR SOLUTIONS</p>
-
-            <h2>
-              One ecosystem.
-              <span>Multiple solutions.</span>
-            </h2>
-          </div>
-
-          <div class="solution-card">
-            <div class="solution-content">
-              <p class="solution-label">DIGITAL PLATFORM</p>
-
-              <h3>GrubnBite</h3>
-
-              <p>
-                A digital food delivery platform designed to connect customers,
-                restaurants and delivery services through one connected
-                experience.
-              </p>
-
-              <span class="coming-label"> MORE SOLUTIONS COMING SOON </span>
-            </div>
-
-            <div class="solution-mark">
-              <span>GX</span>
-            </div>
+          <div class="solutions-cta">
+            <p>Have a project or an idea you'd like to explore?</p>
+            <a href="#contact" class="primary-button">Talk to Mega X Industries <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </section>
 
-      <!-- =========================
-             Contact
-        ========================== -->
-      <section class="contact section section-hidden" id="contact">
+      <section class="contact section" id="contact">
         <div class="container">
           <div class="contact-content">
             <div>
-              <span class="section-label">CONTACT</span>
+              <p class="eyebrow">GET IN TOUCH</p>
               <h2>Let's build what's next.</h2>
-              <p>
-                Have a project, partnership, or opportunity in mind? Get in
-                touch with Mega X Industries.
-              </p>
+              <p>Have a project, partnership or opportunity in mind? Contact Mega X Industries to start a conversation.</p>
             </div>
-
             <div class="contact-details">
-              <a href="mailto:primenaturesolutions@gmail.com">
-                primenaturesolutions@gmail.com
-              </a>
-              <!-- 
-                <a href="tel:0655157586">
-                    065 515 7586
-                </a> -->
+              <a href="mailto:primenaturesolutions@gmail.com">primenaturesolutions@gmail.com</a>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- =========================
-         Footer
-    ========================== -->
     <footer class="footer">
       <div class="container footer-content">
         <div class="footer-logo">MEGA <span>X</span> INDUSTRIES</div>
-
-        <p>Building connected digital solutions.</p>
-
+        <p>Building digital products and connected solutions.</p>
         <p class="copyright">© 2026 Mega X Industries. All rights reserved.</p>
       </div>
     </footer>
-
     <script src="js/script.js"></script>
   </body>
 </html>
